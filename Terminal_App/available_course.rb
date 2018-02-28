@@ -15,7 +15,7 @@ def options
     table = Terminal::Table.new :title =>"IOC", :headings => ['Option:','Subject:'], :rows => rows, :style => {:width => 80}
 
     puts table
-   
+   puts "\n"
     puts "Select option by number".center(80)
     puts "\n"
 
