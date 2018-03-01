@@ -3,6 +3,8 @@ require_relative 'Css_courses'
 require_relative 'Javascript_Courses'
 require_relative 'Ruby_Courses'
 require_relative 'Python_Courses'
+require_relative 'C_Sharp_Courses'
+require_relative "invoice"
 
 require 'colorize'
 module Subject
@@ -11,7 +13,7 @@ def option
     option = ""
     option = gets.chomp
 
-    if option != "6"
+    if option != "8"
         case
 
         when option ==  "1"
@@ -29,6 +31,11 @@ def option
         when option == "5"
         Python_Courses.courses
 
+        when option == "6"
+        C_Sharp_Courses.courses
+
+        when option == "7"
+        Invoice.invoice
     
 
         end
