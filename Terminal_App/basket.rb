@@ -1,5 +1,8 @@
 require_relative "C_Sharp_Courses"
 require_relative "Python_Courses"
+require_relative "HTML_Courses"
+require_relative "Css_Courses"
+require_relative "Javascript_Courses"
 require_relative "available_course"
 require "colorize"
 
@@ -8,8 +11,9 @@ module Basket
 
     def shopping_basket(rows)
          
-       
-    puts "Add Course | Remove Course | Exit"
+    puts "\n"
+    puts "Add Course | Remove Course | Exit".center(80)
+    puts   " (A)            (R)         (E)".center(80)
     
     options = ""
     options = gets.chomp
@@ -34,6 +38,7 @@ module Basket
                 course_option == "1"
                 courses_selected = ""
                 courses_selected << IO.read("course_selections.txt")
+                unless courses_selected.include?(rows[0].join(","))
                 courses_selected += rows[0].join(",") + "\n"
                 total = IO.read("total_cost.txt").to_i
                 total += rows[0][4]
@@ -41,39 +46,68 @@ module Basket
                 puts "\n"
                 puts "Your current total is: ".yellow + "$".green + IO.read("total_cost.txt").green
                 IO.write("course_selections.txt",courses_selected)
-                
-                
                 puts courses_selected
                 puts "\n"
                 Available_Courses.options
+
+                else
+                    puts "\n"
+                    puts "Already in basket!!".colorize(:light_blue)
+                    puts "\n"
+                    Available_Courses.options
+                end
                 
                 
             when
+
+
                 course_option == "2"
-                courses_selected << rows[1]
+                courses_selected = ""
+                courses_selected << IO.read("course_selections.txt")
+                unless courses_selected.include?(rows[1].join(","))
+                courses_selected += rows[1].join(",") + "\n"
                 total = IO.read("total_cost.txt").to_i
                 total += rows[1][4]
-                IO.write("total_cost.txt",total).to_s
+                IO.write("total_cost.txt",total)
                 puts "\n"
-                puts "Your current total is: $".yellow "$".green+ IO.read("total_cost.txt").green
-                pp courses_selected
-                puts "\n"
-                Available_Courses.options
-            when
-                course_option == "3"
-                courses_selected << rows[2]
-                total = IO.read("total_cost.txt").to_i
-                total += rows[2][4].to_i
-                IO.write("total_cost.txt",total).to_s
-                puts "\n"
-                puts "Your current total is: $" + IO.read("total_cost.txt")
-                pp courses_selected
+                puts "Your current total is: ".yellow + "$".green + IO.read("total_cost.txt").green
+                IO.write("course_selections.txt",courses_selected)
+                puts courses_selected
                 puts "\n"
                 Available_Courses.options
 
-            
-    
-                
+                else
+                    puts "\n"
+                    puts "Already in basket!!".colorize(:light_blue)
+                    puts "\n"
+                    Available_Courses.options
+                end
+
+
+            when
+                course_option == "3"
+                courses_selected = ""
+                courses_selected << IO.read("course_selections.txt")
+                unless courses_selected.include?(rows[2].join(","))
+                courses_selected += rows[2].join(",") + "\n"
+                total = IO.read("total_cost.txt").to_i
+                total += rows[2][4]
+                IO.write("total_cost.txt",total)
+                puts "\n"
+                puts "Your current total is: ".yellow + "$".green + IO.read("total_cost.txt").green
+                IO.write("course_selections.txt",courses_selected)
+                puts courses_selected
+                puts "\n"
+                Available_Courses.options
+
+                else
+                    puts "\n"
+                    puts "Already in basket!!".colorize(:light_blue)
+                    puts "\n"
+                    Available_Courses.options
+                end
+
+
 
             end
             

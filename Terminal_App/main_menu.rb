@@ -6,7 +6,10 @@ option = ""
 module Main_Menu
     module_function
 def options
+    puts "-".center(80,"-")
     puts "Availble courses | Information | End"
+    puts "-".center(80,"-")
+    puts "\n"
     option = gets.chomp
     
 if option == "a"
