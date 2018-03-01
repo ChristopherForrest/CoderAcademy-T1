@@ -1,12 +1,10 @@
-#gem install terminal-table
+#gem install terminal-table - Possibly install gems for users for compatability
 require'terminal-table'
 require_relative'subject'
 
 module Available_Courses
     module_function
 def options
-    
-    
 
     rows = []
     rows << [1, "HTML"]
@@ -22,7 +20,7 @@ def options
 
     puts table
     puts "\n"
-    puts "Select option by number".center(80)
+    puts "Select option by number".center(80).yellow
     puts "\n"
 
    Subject.option

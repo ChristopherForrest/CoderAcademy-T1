@@ -1,9 +1,12 @@
-require_relative "C_Sharp_Courses"
-require_relative "Python_Courses"
-require_relative "HTML_Courses"
-require_relative "Css_Courses"
-require_relative "Javascript_Courses"
-require_relative "available_course"
+require_relative "c_sharp_courses"
+require_relative "python_courses"
+require_relative "html_courses"
+require_relative "javascript_courses"
+require_relative "ruby_courses"
+require_relative "available_Course"
+require_relative "css_courses"
+require_relative "clear_basket"
+require_relative "main_menu"
 require "colorize"
 
 module Basket
@@ -12,8 +15,11 @@ module Basket
     def shopping_basket(rows)
          
     puts "\n"
-    puts "Add Course | Remove Course | Exit".center(80)
-    puts   " (A)            (R)         (E)".center(80)
+    puts "Select option by number".center(80).yellow
+    puts "\n"
+    puts "\n"
+    puts "Add Course: 1     Clear Courses: 2        Exit: 3        " .center(83)
+    puts "\n"
     
     options = ""
     options = gets.chomp
@@ -21,14 +27,10 @@ module Basket
         
         # p list[0]
         case
-        when options == "r"
-            starting_balance = 0
-            IO.write("total_cost.txt",starting_balance).to_s
-            courses_selected = ["good"]
-            puts courses_selected
-            Available_Courses.options
+           when options == "2"
+            Clear_Basket.purge
 
-            when options ==  "a"
+            when options ==  "1"
             puts "Enter Course ID"
             course_option = gets.chomp
             if course_option != "Exit"
