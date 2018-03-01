@@ -1,4 +1,4 @@
-module Poop
+module Information
     module_function
 
 def information

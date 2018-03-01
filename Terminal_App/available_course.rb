@@ -14,8 +14,9 @@ def options
     rows << [3, "Javascript"]
     rows << [4, "Ruby"]
     rows << [5, "Python"]
+    rows << [6, "C#"]
     rows << [" ", " "]
-    rows << [6, "Quit"]
+    rows << [7, "Quit"]
     table = Terminal::Table.new :title =>"IOC", :headings => ['Option:','Subject:'], :rows => rows, :style => {:width => 80}
 
     puts table

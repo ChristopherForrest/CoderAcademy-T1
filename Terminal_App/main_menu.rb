@@ -9,13 +9,13 @@ def options
     puts "Availble courses | Information | End"
     option = gets.chomp
     
-if option == "available courses"
+if option == "a"
     
     Available_Courses.options
 
 elsif option == "information"
    
-    Poop.information 
+    Information.information 
 
 elsif option == "End"
     
