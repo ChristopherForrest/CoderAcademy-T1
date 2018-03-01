@@ -7,7 +7,7 @@ def information
 
 
     puts "\n"
-    puts "Email: info@coderacademy.edu.au
+    puts "Email: info@Institute_of_Coding.edu.au
 
     Sydney
     Phone: +61 2 8355 3822
