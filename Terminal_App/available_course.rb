@@ -5,7 +5,7 @@ require_relative'subject'
 module Available_Courses
     module_function
 def options
-
+    
     rows = []
     rows << [1, "HTML"]
     rows << [2, "CSS"]
@@ -18,12 +18,12 @@ def options
     rows << [8, "Quit"]
     table = Terminal::Table.new :title =>"IOC", :headings => ['Option:','Subject:'], :rows => rows, :style => {:width => 80}
 
-    puts table
+    puts table #Creates table using Gem (Terminal-Table), Prints table of available languages to learn
     puts "\n"
     puts "Select option by number".center(80).yellow
     puts "\n"
 
-   Subject.option
+   Subject.option # Directs user to course level / availability and prints options
 
 
 end

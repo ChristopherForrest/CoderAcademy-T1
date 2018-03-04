@@ -3,6 +3,7 @@ require_relative "basket"
 module Javascript_Courses
     module_function
     def courses
+    #Build table to print to screen showing courses per level from broad course selection        
     rows = []
     rows << [1,'Javascript:Beginners','Feb 19th','Feb 28th', 20000]
     rows << [2,'Javascript:Intermediate','March 1st','March 31st', 40000 ]
@@ -11,7 +12,7 @@ module Javascript_Courses
     puts table
     rows
 
-    Basket.shopping_basket(rows)
+    Basket.shopping_basket(rows)  #Call Basket module with rows as parameter
     end
 
 end

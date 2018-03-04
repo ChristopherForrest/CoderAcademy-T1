@@ -2,6 +2,7 @@ require_relative "basket"
 
 module Ruby_Courses
     module_function
+    #Build table to print to screen showing courses per level from broad course selection
     def courses
     rows = []
     rows << [1,'Ruby:Beginners','Feb 19th','Feb 28th', 20000]
@@ -10,8 +11,7 @@ module Ruby_Courses
     table = Terminal::Table.new :title =>"IOC", :headings => ['Course:','Start Date:','End Date:','Price:'], :rows => rows, :style => {:width => 80}
     puts table
     rows
-
-    Basket.shopping_basket(rows)
+    Basket.shopping_basket(rows) #Call Basket module with rows as parameter
     end
 
 end

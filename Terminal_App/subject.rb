@@ -15,9 +15,9 @@ def option
 
     if option != "8"
         case
-
+      # Prints list of available courses as per selection
         when option ==  "1"
-        Html_Courses.courses
+        Html_Courses.courses 
 
         when option == "2"
         Css_Courses.courses
@@ -34,7 +34,7 @@ def option
         when option == "6"
         C_Sharp_Courses.courses
 
-        when option == "7"
+        when option == "7"  # Prints a list of courses selected and asks user to varify if they would like to proceed
         Invoice.invoice
     
 

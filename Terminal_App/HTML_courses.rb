@@ -2,6 +2,7 @@ require_relative "basket"
 
 module Html_Courses
     module_function
+    #Build table to print to screen showing courses per level from broad course selection
     def courses
     rows = []
     rows << [1,'HTML:Beginners','Feb 19th','Feb 28th', 20000]
@@ -11,7 +12,7 @@ module Html_Courses
     puts table
     rows
     
-    Basket.shopping_basket(rows)
+    Basket.shopping_basket(rows)   #Call Basket module with rows as parameter
     end
 
 end
