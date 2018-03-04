@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 1,HTML:Beginners,Feb 19th,Feb 28th,20000
+=======
+3,HTML:Advanced,April 1st,April 30th,80000
+>>>>>>> 7622590d0ebaed532d853f20e3868de5eaca250d
